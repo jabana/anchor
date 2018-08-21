@@ -99,7 +99,7 @@ def load_dataset(dataset_name, balance=False, discretize=True, dataset_folder='.
             14: lambda x: map_array_values(x, label_map),
         }
         dataset = load_csv_dataset(
-            os.path.join(dataset_folder, 'adult/adult.data'), -1, ', ',
+            os.path.join(dataset_folder, 'adult', 'adult.data'), -1, ', ',
             feature_names=feature_names, features_to_use=features_to_use,
             categorical_features=categorical_features, discretize=discretize,
             balance=balance, feature_transformations=transformations)
@@ -113,14 +113,14 @@ def load_dataset(dataset_name, balance=False, discretize=True, dataset_folder='.
             49: lambda x: map_array_values(x, label_map),
         }
         dataset = load_csv_dataset(
-            os.path.join(dataset_folder, 'diabetes/diabetic_data.csv'), -1, ',',
+            os.path.join(dataset_folder, 'diabetes', 'diabetic_data.csv'), -1, ',',
             features_to_use=range(2, 49),
             categorical_features=categorical_features, discretize=discretize,
             balance=balance, feature_transformations=transformations)
     elif dataset_name == 'default':
         categorical_features = [2, 3, 4, 6, 7, 8, 9, 10, 11]
         dataset = load_csv_dataset(
-                os.path.join(dataset_folder, 'default/default.csv'), -1, ',',
+                os.path.join(dataset_folder, 'default', 'default.csv'), -1, ',',
                 features_to_use=range(1, 24),
                 categorical_features=categorical_features, discretize=discretize,
                 balance=balance)
@@ -160,7 +160,7 @@ def load_dataset(dataset_name, balance=False, discretize=True, dataset_folder='.
         }
 
         dataset = load_csv_dataset(
-            os.path.join(dataset_folder, 'recidivism/Data_1980.csv'), 16,
+            os.path.join(dataset_folder, 'recidivism', 'Data_1980.csv'), 16,
             feature_names=feature_names, discretize=discretize,
             features_to_use=features_to_use, balance=balance,
             feature_transformations=transformations, skip_first=True)
@@ -182,7 +182,7 @@ def load_dataset(dataset_name, balance=False, discretize=True, dataset_folder='.
         features_to_use = [2, 12, 13, 19, 29, 35, 51, 52, 109]
         categorical_features = [12, 109]
         dataset = load_csv_dataset(
-            os.path.join(dataset_folder, 'lendingclub/LoanStats3a_securev1.csv'),
+            os.path.join(dataset_folder, 'lendingclub', 'LoanStats3a_securev1.csv'),
             16, ',',  features_to_use=features_to_use,
             feature_transformations=transformations, fill_na='-999',
             categorical_features=categorical_features, discretize=discretize,
