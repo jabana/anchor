@@ -335,8 +335,9 @@ class AnchorTabularExplainer(object):
                 fname = '%s = ' % self.feature_names[f]
                 if f in self.categorical_names:
                     v = int(v)
-                    if ('<' in self.categorical_names[f][v]
-                            or '>' in self.categorical_names[f][v]):
+                    if (type(self.categorical_names[f][v]) is str
+                            and ('<' in self.categorical_names[f][v]
+                            or '>' in self.categorical_names[f][v])):
                         fname = ''
                     fname = '%s%s' % (fname, self.categorical_names[f][v])
                 else:
