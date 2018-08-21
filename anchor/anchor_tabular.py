@@ -231,7 +231,7 @@ class AnchorTabularExplainer(object):
 
     def get_sample_fn(self, data_row, classifier_fn, desired_label=None):
         def predict_fn(x):
-            return classifier_fn(self.encoder.transform(x))
+            return classifier_fn(x)
         true_label = desired_label
         if true_label is None:
             true_label = predict_fn(data_row.reshape(1, -1))[0]
@@ -307,7 +307,7 @@ class AnchorTabularExplainer(object):
             **kwargs)
         self.add_names_to_exp(data_row, exp, mapping)
         exp['instance'] = data_row
-        exp['prediction'] = classifier_fn(self.encoder.transform(data_row.reshape(1, -1)))[0]
+        exp['prediction'] = classifier_fn(data_row.reshape(1, -1))[0]
         explanation = anchor_explanation.AnchorExplanation('tabular', exp, self.as_html)
         return explanation
 
