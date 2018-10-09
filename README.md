@@ -22,12 +22,3 @@ The lime package is on pypi. Simply run:
 Or clone the repository and run:
 
     python setup.py install
-
-#### Examples
-See notebooks folder for tutorials.
-
-- [Tabular data](https://github.com/marcotcr/anchor/blob/master/notebooks/Anchor%20on%20tabular%20data.ipynb)
-- [Text data](https://github.com/marcotcr/anchor/blob/master/notebooks/Anchor%20for%20text.ipynb)
-
-## Citation
-[Here](https://homes.cs.washington.edu/~marcotcr/aaai18.bib) is the bibtex if you want to cite this work.
