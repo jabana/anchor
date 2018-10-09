@@ -1,6 +1,6 @@
 This is an fork of the original work of Marco Tulio Ribeiro, Sameer Singh and Carlos Guestrin and their Method Anchor.
 
-Unlike the idea of an model-agnostic approach for explaining machine learning models is the implementation not data-agnostic. Therefore, I changed anchor_tabluar.py to not use OneHotEncoding befor calling the prediction function.
+Unlike the idea of an model-agnostic approach for explaining machine learning models is the implementation not data-agnostic. Therefore, I changed anchor_tabluar.py to not use OneHotEncoding befor calling the prediction function. Otherwise, it would not be possible to use models with categorical or metrical features.
 Also is it now possible to have features of type bool.
 
 # Anchor
